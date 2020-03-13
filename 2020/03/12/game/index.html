@@ -28,7 +28,7 @@
 <meta property="og:description" content="刷b站刷着刷着就到了博弈论的课【 或许记录下来是个不错的选择【淦，旺仔牛奶好甜啊以后别喝了】 博弈论初探1 从简单的游戏开始【把课里的游戏稍微魔改一下】 每个人都在α和β中做出选择，选择完毕后将会匹配另一个人。两人的选择将会对各自的最终成绩产生影响。 设你和另一人的选择为（X，Y），则当（X，Y）为 1.（α，α）时，你的成绩为C，另一人的成绩为C 2.（α，β）时，你的成绩为A，另一人的成绩为D">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-12T10:18:16.000Z">
-<meta property="article:modified_time" content="2020-03-12T10:55:54.921Z">
+<meta property="article:modified_time" content="2020-03-13T07:25:06.808Z">
 <meta property="article:author" content="BDD">
 <meta name="twitter:card" content="summary">
 
@@ -180,10 +180,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-03-12 18:18:16 / Modified: 18:55:54" itemprop="dateCreated datePublished" datetime="2020-03-12T18:18:16+08:00">2020-03-12</time>
+              <time title="Created: 2020-03-12 18:18:16" itemprop="dateCreated datePublished" datetime="2020-03-12T18:18:16+08:00">2020-03-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-13 15:25:06" itemprop="dateModified" datetime="2020-03-13T15:25:06+08:00">2020-03-13</time>
+              </span>
 
           
 
@@ -238,7 +244,43 @@
 </tbody></table>
 <p><del>啊顺带一提，原课程中是先把自己获得的成绩做一个表格，对手的获得的成绩做一个表格，最终再合在一起的。怎么说，这样子虽然慢了点，但是不至于跨度太大看不太懂。而且觉得这种慢慢来的感觉，逐步约定格式什么的，可以一定程度减轻可能存在的排斥感（“凭什么按你这么来”什么的）</del></p>
 <p>通过对表格的观察，可以发现  <u>无论对手选择的是哪一个，你选择α所能获得的成绩永远比选择β来的要好。</u></p>
-<p>所以选择α就是一个<strong>绝对优势策略</strong><!--不行了我觉得打αβ好麻烦，本来就是AB的，但是成绩就不知道用什么好了xwx可恶--></p>
+<p>所以选择α就是一个<strong>严格优势策略</strong>（Strictly Dominant Strategy）<!--不行了我觉得打αβ好麻烦，本来就是AB的，但是成绩就不知道用什么好了xwx可恶--></p>
+<p>啊淦，这样写太慢了！写这个都相当于再上一次课了！</p>
+<p>啊不管了，于是于是课上的第一条：</p>
+<p><strong>Lesson1：永远不要选择严格劣势策略</strong><!--Do not play a strictly dominated strategy.--></p>
+<p><del>虽然在最开始的时候就已经把表格内容给量化了。</del></p>
+<p>先假设你和对手都是只考虑自己利益的恶魔【</p>
+<p>我们试着量化一下最终结果给你带来的收益：</p>
+<table>
+<thead>
+<tr>
+<th>你\对手</th>
+<th>α</th>
+<th>β</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>α</td>
+<td>0，0</td>
+<td>3，-1</td>
+</tr>
+<tr>
+<td>β</td>
+<td>-1，3</td>
+<td>1，1</td>
+</tr>
+</tbody></table>
+<p>这样的话可能比刚刚的要方便比较一点点。</p>
+<p>选α就是要比选β好。</p>
+<p>但是就是会很纠结，明明大家都选α还不如一起选β呢。</p>
+<p>于是引出下一个结论：</p>
+<p><strong>Lesson2:  理性人的理性选择造成了次优的结果</strong><!--Rational choices by rational players can lead to bad outcome.--></p>
+<p>但是话是这么说，但是为什么还是说要选α不要选β？</p>
+<p>反过来想，作为一个只顾自己利益的人，对方选β的时候不就应该选α嘛！明明收益更高不是吗？</p>
+<p>好吧好吧，但我不是那种只顾自己利益的人【嘀咕】</p>
+<p>噢，那么我们把收益变成这样如何：</p>
+<p><strong>Lesson3:  当你知道你要什么的时候，你才能得到它</strong><!--You can't get what you want, till you know what you want.--></p>
+<p><strong>Lesson4:  换位思考</strong><!--Put yourself in other's shoes and try to figure out what they will do.--></p>
 
     </div>
 
