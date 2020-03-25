@@ -177,10 +177,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-03-24 09:42:25 / Modified: 20:57:13" itemprop="dateCreated datePublished" datetime="2020-03-24T09:42:25+08:00">2020-03-24</time>
+              <time title="Created: 2020-03-24 09:42:25" itemprop="dateCreated datePublished" datetime="2020-03-24T09:42:25+08:00">2020-03-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-26 00:17:48" itemprop="dateModified" datetime="2020-03-26T00:17:48+08:00">2020-03-26</time>
+              </span>
 
           
 
@@ -194,21 +200,31 @@
 
       
           <h3 id="1-lambda函数"><a href="#1-lambda函数" class="headerlink" title="1. lambda函数"></a>1. lambda函数</h3><p>感觉很神奇的一个函数，可以这么用</p>
-<p><code>lambda a ,b : a+b</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> a ,b : a+b</span><br></pre></td></tr></table></figure>
 <p>是<strong>匿名</strong>函数，即没有函数名的函数。语法实际上是这样的：</p>
-<p><code>lambda [arg1 [,arg2,.....argn]]:expression</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> [arg1 [,arg2,.....argn]]:expression</span><br></pre></td></tr></table></figure>
 <p>感觉某种意义上用起来很方便0 0</p>
 <h3 id="2-reduce函数"><a href="#2-reduce函数" class="headerlink" title="2. reduce函数"></a>2. reduce函数</h3><p>标准格式是这样的：</p>
-<p><code>reduce(function, iterable[, initializer])</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reduce(function, iterable[, initializer])</span><br></pre></td></tr></table></figure>
 <p>iterable  可迭代的/可重复的 –&gt;可迭代对象</p>
 <p>简单点讲会把iterable的数据按照function的计算方式来累积</p>
 <p>但是顺序是前两个算好后，得出的结果跟第三个再算</p>
 <p>【所以函数的参数应该是限定两个的吗？试了下的确】</p>
 <p>那么接下来是例子：</p>
-<p><code>print(reduce(lambda x,y:x+y,[1,2,3,4,5]))</code></p>
-<p>[123]: </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(reduce(<span class="keyword">lambda</span> x,y:x+y,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br></pre></td></tr></table></figure>
+
+
 <p>结果是15   0 0.</p>
-<p>要注意的一点：</p>
+<p>要<strong><em>注意</em></strong>的是，</p>
+<blockquote>
+<p>在 Python3 中，reduce() 函数已经被从全局名字空间里移除了，它现在被放置在 functools 模块里，如果想要使用它，则需要通过引入 functools 模块来调用 reduce() 函数：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br></pre></td></tr></table></figure>
+
+<p>然后然后，有一种神奇的用法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">"hello"</span></span><br><span class="line">print(reduce(<span class="keyword">lambda</span> x,y:y+x,str1))</span><br></pre></td></tr></table></figure>
+
+<p>输出是olleh  ，很神奇w【看了一会才看懂了】</p>
 
       
     </div>
